@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  ruby:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ruby
+    env_file: .env.local
+    ports:
+      - '3000:3000'
